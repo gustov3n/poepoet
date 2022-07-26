@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_kantinku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/app_name"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/icon_fast_food"
+        app:layout_constraintStart_toStartOf="@+id/icon_fast_food"
+        app:layout_constraintTop_toBottomOf="@+id/icon_fast_food" />
+
+    <ImageView
+        android:id="@+id/icon_fast_food"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="256dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_fastfood_purple_500_48dp" />
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="216dp"
+        android:onClick="goToOnboarding"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+
+            android:orientation="horizontal">
+            <Space
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:background="none"
+                app:srcCompat="@drawable/baseline_home_purple_500_24dp" />
+            <Space
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:background="none"
+                android:layout_toEndOf="@id/imageButton"
+                app:srcCompat="@drawable/baseline_assignment_purple_500_24dp" />
+            <Space
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:background="none"
+                android:layout_toEndOf="@id/imageButton2"
+                app:srcCompat="@drawable/baseline_payment_purple_500_24dp" />
+            <Space
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:background="none"
+                android:layout_toEndOf="@id/imageButton2"
+                app:srcCompat="@drawable/baseline_account_circle_purple_500_24dp" />
+            <Space
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+        </LinearLayout>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
